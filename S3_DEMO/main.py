@@ -73,7 +73,7 @@ def retrieve_policy(s3_client, bucket_name):
 
 def create_policy(s3_client, bucket_name):
     bucket_policy = {
-        'Version': '2012-10-17',
+        'Version': '2024-10-17',
         'Statement': [{
             'Sid': 'AddPerm',
             'Effect': 'Allow',
@@ -93,4 +93,5 @@ def create_policy(s3_client, bucket_name):
 if __name__ == '__main__':
     # create bucket
     client = boto3.client('s3')
-    create_bucket(client,"test", "us-east-1")
+    list_buckets(client)
+    #create_bucket(client,"test", "sa-east-1")
